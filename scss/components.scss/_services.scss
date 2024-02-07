@@ -1,0 +1,183 @@
+.services {
+    width: 100%;
+    padding:320px 3vw 0 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 320px;
+
+    img{
+        position: absolute;
+        left: 0;
+        transform: translate(3vw, 50%)
+    }
+
+    .content {
+        position: relative;
+        max-width: 970px;
+        display: flex;
+        gap: 60px;
+        flex-direction: column;
+    }
+
+    .service-list{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 60px;
+
+        h2 {
+            margin-bottom: 100px;
+        }
+
+        .service{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            padding: 100px 69px;
+            border-top: 1px solid $border;
+
+            &:nth-of-type(3) {
+                border-bottom: 1px solid $border;
+            }
+
+            .col-1{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                max-width: 850px;
+                gap: 24px;
+                margin-right: auto;
+            }
+
+            .col-2 {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 40%;
+                padding-top: 24px;
+                gap: 80px;
+
+                .group {
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                    &:nth-last-of-type(1) {
+                        margin-bottom: 40px;
+                    }
+                }
+
+                .pill-container {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    gap: 16px;
+                    flex-wrap: wrap;
+
+                    .pill {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        flex-direction: row;
+                        width: fit-content;
+                        padding: 9px 24px;
+                        border: 1px solid $border;
+                        border-radius: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Break point xl
+    @media (width < 2100px) {
+        .service{
+            position: relative;
+            gap: 40px;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            .col-1 {
+                max-width: fit-content;
+                width: 50%;
+            }
+            .col-2 {
+                position: relative;
+                width: 50%;
+
+                .group {
+                    width: 100%
+                }
+
+                .pill-container {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+    @media (width < 1320px) {
+
+        .services{
+            .content {
+                max-width: 60%;
+            }
+        }
+        .service {
+            flex-wrap: wrap;
+    
+            .col-1 {
+                min-width: 100%;
+            }
+            .col-2 {
+                min-width: 100%;
+            }
+        }
+    }
+
+    @media (width < 1000px) {
+        .services {
+            h2.xl {
+                margin-bottom: 60px;
+            }
+        }
+        .service-list {
+            padding: 20px !important;
+
+        }
+        .service {
+            padding: 80px 0px !important;
+        }
+    }
+
+    @media (width < 900px) {
+        .services {
+            padding: 120px 40px;
+            gap: 200px;
+            .content {
+                max-width: 100%;
+            }
+
+            .arrow {
+                display: none;
+            }
+
+            .col-2 {
+                .pill-container {
+                    gap: 12px !important;
+                }
+            }
+        }
+    }
+
+    @media (width < 600px) {
+        .services {
+            .service-list {
+                padding: 0px !important;
+            }
+        }
+    }

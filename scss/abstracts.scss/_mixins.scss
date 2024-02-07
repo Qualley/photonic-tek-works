@@ -1,0 +1,43 @@
+// Typography
+@mixin paragraph {
+    font-size: 18px;
+    line-height: 38px;
+    font-weight: 300;
+    letter-spacing: 0.75px;
+}
+
+// Flex  direction, justify, align-items, align-content,
+@mixin flex(
+    // Variable defaults
+    $display: flex,
+    $dir: column, 
+    $just: center, 
+    $align-i: flex-start, 
+    $align-c: flex-start ) {
+        // Property defaults
+        display: $display;
+        flex-direction: $dir;
+        justify-content: $just;
+        align-items: $align-i;
+        align-content: $align-c;
+
+        @if $dir == row {
+            flex-direction: $dir;
+        }
+        @if $just == flex-start {
+            justify-content: $just;
+        }
+        @if $align-i == center {
+            align-items: $align-i;
+        }
+        @if $align-c == cneter {
+            align-content: $align-c;
+        }
+}
+
+
+
+
+
+
+
