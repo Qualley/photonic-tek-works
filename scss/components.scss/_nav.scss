@@ -142,6 +142,15 @@
 }
 
 @media (width < 750px) {
+    #nav{
+        .navWrapper {
+            .links {
+                a {
+                    padding: 8px 12px;;
+                }
+            }
+        }
+    }
     .scroll-nav{
         right: 40px;
         top: 60px;

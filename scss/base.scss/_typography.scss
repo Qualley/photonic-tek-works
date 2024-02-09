@@ -18,7 +18,6 @@ h1 {
     font-size: max(4rem, 8vw);
     font-weight: 760;
     line-height: 1;
-    letter-spacing: 1px;
     transform: translate(0, 0);
 }
 
@@ -134,16 +133,22 @@ a {
 @media (width < 600px) {
     h2{
         &.xl{
-            font-size: 44px;
+            font-size: 40px;
+            margin-bottom: 36px !important;
         }
     }
     h3{
-        line-height: 52px;
+        line-height: 44px;
         &.sm {
-            line-height: 52px;
+            font-size: 32px;
+            line-height: 44px;
         }
     }
     p {
+        &.xl{
+            line-height: 36px;
+            font-size: 20px;
+        }
         &.subtitle {
             font-size: 9px;
         }

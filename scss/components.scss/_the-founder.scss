@@ -77,7 +77,9 @@
 
             .img-wrapper {
                 background: $gradient;
+                position: relative;
                 height: 500px;
+                width: 100%;
                 max-width: 650px;
                 position: relative;
                 display: flex;
@@ -87,6 +89,9 @@
 
                 img{
                     height: fit-content;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
                     border-radius: 12px;
                     object-fit: contain;
                 }
@@ -349,6 +354,20 @@
 
                 .img-wrapper{
                     max-height: 400px;
+                    position: relative;
+
+                    img{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+                .content-wrapper {
+                    width: 100%;
+
+                    .icons {
+                        flex-direction: column;
+                    }
                 }
             }
         }
