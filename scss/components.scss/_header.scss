@@ -70,6 +70,10 @@
 
 @media (width < 600px) {
     .header {
+        padding-top: 120px;
+        .content{
+            padding: 0px;
+        }
         img {
             margin-bottom: 40px;
         }

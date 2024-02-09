@@ -1,4 +1,5 @@
 const burger = document.querySelector('.burger-container');
+const mobileNav = document.querySelector('.scroll-nav')
 const mobileNavList = document.querySelector('.scroll-nav .navWrapper');
 const close = document.querySelector('.close');
 
@@ -18,6 +19,5 @@ mobileNavList.addEventListener('click', ()=> {
 })
 
 window.addEventListener("scroll", (event) => {
-    // console.log(window.scrollY)
     window.scrollY > 200 ? burger.classList.remove('hidden') : burger.classList.add('hidden')
 });
