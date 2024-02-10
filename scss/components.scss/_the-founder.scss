@@ -89,11 +89,14 @@
 
                 img{
                     height: fit-content;
+                    object-fit: cover;
                     position: absolute;
+                    width: 100%;
                     bottom: 0;
                     right: 0;
                     border-radius: 12px;
                     object-fit: contain;
+                    object-position: bottom right;
                 }
             }
 
@@ -238,6 +241,7 @@
 @media (width < 1200px) {
     .the-founder {
         padding: 0 40px;
+        margin-bottom: 80px;
 
         .wrapper {
             flex-direction: column-reverse;
@@ -273,6 +277,7 @@
 @media (width < 750px) {
     .the-founder {
         padding: 0 40px;
+        margin-bottom: 100px;
 
         .wrapper {
             .col-1 {
@@ -306,11 +311,12 @@
                 .img-wrapper {
                     width: 100%;
                     justify-content: flex-end;
-                    align
                     
                     #mark {
-                        width: 100%;
-                        height: 500px;
+                        width: auto;
+                        height: 550px !important;
+                        object-fit: cover;
+                        object-position: bottom right;
                     }
                 }
 
@@ -325,6 +331,7 @@
 @media (width < 600px) {
     .the-founder {
         padding: 0 24px;
+        margin-bottom: 80px;
 
         .wrapper {
             padding-top: 12px;
@@ -356,10 +363,11 @@
                     max-height: 400px;
                     position: relative;
 
-                    img{
-                        position: absolute;
-                        bottom: 0;
-                        right: 0;
+                    #mark {
+                        width: auto;
+                        height: 500px !important;
+                        object-fit: cover;
+                        object-position: bottom right;
                     }
                 }
                 .content-wrapper {
@@ -386,6 +394,138 @@
                     max-height: 400px;
                 }
             }
+        }
+    }
+}
+
+.contact-wrapper {
+    border-top: 1px solid $border;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    transition: all .3s $ease-smooth;
+
+    &:hover {
+        .email {
+            gap: 160px;
+        }
+    }
+
+    a {
+        padding: 80px 120px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .email {
+        color: $text-default;
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+
+        transition: all .4s $ease-snappy;
+    }
+}
+
+@media (width < 1200px) {
+    .contact-wrapper {
+
+        &:hover {
+            .email {
+                gap: 80px;
+            }
+        }
+
+        a {
+            padding: 60px 100px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .email {
+            gap: 40px;
+        }
+    }
+}
+
+@media (width < 900px) {
+    .contact-wrapper {
+
+        &:hover {
+            .email {
+                gap: 80px;
+            }
+        }
+
+        a {
+            padding: 60px 100px;
+
+            img {
+                width: 40px;
+            }
+
+            h3 {
+                font-size: 36px;
+            }
+        }
+
+        .email {
+            gap: 40px;
+        }
+    }
+}
+
+@media (width < 750px) {
+    .contact-wrapper {
+
+        &:hover {
+            .email {
+                gap: 60px;
+            }
+        }
+
+        a {
+            padding: 60px 40px;
+
+            img {
+                width: 40px;
+            }
+
+            h3 {
+                font-size: 30px;
+            }
+        }
+
+        .email {
+            gap: 30px;
+        }
+    }
+}
+
+@media (width < 600px) {
+    .contact-wrapper {
+
+        &:hover {
+            .email {
+                gap: 40px;
+            }
+        }
+
+        a {
+            padding: 60px 20px;
+
+            img {
+                width: 24px;
+            }
+
+            h3 {
+                font-size: 22px;
+            }
+        }
+
+        .email {
+            gap: 20px;
         }
     }
 }
